@@ -27,6 +27,6 @@ while True:
             month = month_num[i]
             break
 
-    I2C.lcd_string("{}.{}.  {}".format(month, day, current_time), I2C.LCD_LINE_1)
+    I2C.lcd_string("{}.{}.{}.{}".format(year, month, day, current_time[0:5]), I2C.LCD_LINE_1)
     I2C.lcd_string("{}`C     {}%".format(temperature, humidity), I2C.LCD_LINE_2)
     time.sleep(1)
