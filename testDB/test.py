@@ -42,9 +42,9 @@ try:
                 month = month_num[i]
                 break
 
-        cur.execute("INSERT INTO dht11 VALUES('{}.{}.{}.{}', {}, {})".format(year, month, day, current_time, temperature, humidity))
+        cur.execute("INSERT INTO dht11 VALUES('{}.{}.{}', '{}' '{}', '{}')".format(year, month, day, current_time, temperature, humidity))
 
-        print("{}.{}.{}.{} - Temperature: {} C, Humidity: {}%".format(year, month, day, current_time, temperature, humidity))
+        print("{}.{}.{} / {} / Temperature: {} C, Humidity: {}%".format(year, month, day, current_time, temperature, humidity))
         time.sleep(5)
 
 except:
