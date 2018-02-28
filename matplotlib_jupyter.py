@@ -12,10 +12,11 @@ for i in range(0, 30) :
 ax.plot(random_int, label = 'random')
 ax.set_ylim(0, 100)
 
-ax.legend()
+ax.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=1, borderaxespad=0.)
 ax.set_xlabel('timesteps')
+ax.set_ylabel('random number')
 ax.grid()
-ax.set_title('random int')
+ax.set_title('random')
 
 while True:
     for i in range(0, 29) :
