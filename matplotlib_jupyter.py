@@ -1,8 +1,3 @@
-import matplotlib.pylab as plt
-import time
-
-%matplotlib notebook
-
 import random
 
 fig,ax = plt.subplots(1,1)
@@ -14,8 +9,13 @@ for i in range(0, 30) :
     random_int.append(random.randint(0, 100))
     timeline.append(i)
     
-ax.plot(random_int)
+ax.plot(random_int, label = 'random')
 ax.set_ylim(0, 100)
+
+ax.legend()
+ax.set_xlabel('timesteps')
+ax.grid()
+ax.set_title('random int')
 
 while True:
     for i in range(0, 29) :
@@ -32,4 +32,4 @@ while True:
     line.set_xdata(timeline)
     
     fig.canvas.draw()
-    time.sleep(0.5)
+    time.sleep(0.01)
