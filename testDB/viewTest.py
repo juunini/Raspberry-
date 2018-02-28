@@ -6,14 +6,14 @@ cur = conn.cursor()
 cur.execute("""
     SELECT column_name
     FROM INFORMATION_SCHEMA.COLUMNS
-    WHERE TABLE_NAME = ''
+    WHERE TABLE_NAME = 'dht11'
 """)
 describe = cur.fetchall()
 
 for desc in describe :
-    print(desc, end = '\t')
+    print(desc[0], end = '\t\t')
     
-print('\n----------------------------------------------------')
+print('\n----------------------------------------------------------------')
 
 cur.execute("SELECT * FROM dht11")
 rows = cur.fetchall()
